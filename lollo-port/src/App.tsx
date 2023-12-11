@@ -1,23 +1,23 @@
 import React from 'react';
 import './App.css';
-import {Route, Router, Switch} from "wouter";
-import Homepage from "./pages/MainPage";
+import {Redirect, Route, Router, Switch} from "wouter";
+import MainPage from "./pages/MainPage";
 
 function App() {
     return (
         <Router>
             <Switch>
                 <Route path={"/"}>
-                    <Homepage/>
+                    <MainPage location={"/"}/>
                 </Route>
                 <Route path={"/about"}>
-
+                    <MainPage location={"/about"}/>
                 </Route>
                 <Route path={"/contact"}>
-
+                    <MainPage location={"/contact"}/>
                 </Route>
                 <Route>
-                    {/* Page not found*/}
+                    <Redirect to={"/"}/>
                 </Route>
             </Switch>
         </Router>

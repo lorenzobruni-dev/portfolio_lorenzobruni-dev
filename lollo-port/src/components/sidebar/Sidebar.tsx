@@ -21,7 +21,7 @@ const Sidebar = ({
       h={"100%"}
       justify={"space-between"}
     >
-      <Box p={10}>
+      <Box p={10} h={80} w={80}>
         <Image src={iconDev} />
       </Box>
       <Flex

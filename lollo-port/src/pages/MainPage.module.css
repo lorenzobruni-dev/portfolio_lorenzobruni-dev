@@ -1,6 +1,5 @@
 .home {
-    background: url("../assets/backgrounds/background-homepage.webp");
     width: 100vw;
     height: 100vh;
-    background-position: 200px;
+    background: url("../assets/backgrounds/background-homepage.webp") 200px;
 }

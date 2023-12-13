@@ -32,12 +32,12 @@ const Sidebar = ({
   return (
     <Flex
       direction={"column"}
-      wrap={"wrap"}
+      wrap={"nowrap"}
       align={"center"}
       h={"100%"}
       justify={"space-between"}
     >
-      <Box p={10} h={80} w={80}>
+      <Box p={5} >
         <Image src={iconDev} />
       </Box>
       <Flex
@@ -49,7 +49,7 @@ const Sidebar = ({
       >
         {actions.map((act, index) => (
           <ActionIcon
-            size={50}
+              size={30}
             onClick={() => handleClick(act.actions, index)}
             c={active[index] ? theme.colors.yellow[3] : "none"}
           >

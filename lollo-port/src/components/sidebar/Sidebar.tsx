@@ -2,7 +2,8 @@ import { ActionIcon, Box, Flex, Image, useMantineTheme } from "@mantine/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import iconDev from "../../assets/sidebar/icon-dev.svg.png";
 import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "wouter";
 
 type SidebarProps = {
   onHomePageIconClick: () => void;
@@ -15,12 +16,20 @@ const Sidebar = ({
   onContactMeIconClick,
 }: SidebarProps) => {
   const theme = useMantineTheme();
+  const [location] = useLocation();
   const [active, setActive] = useState([false, false, false]);
   const handleClick = (action: () => void, index: number) => {
     const newActive = Array(active.length).fill(false);
     newActive[index] = true;
     setActive(newActive);
+    action();
   };
+
+  useEffect(() => {
+    if (location === "/") setActive([true, false, false]);
+    else if (location === "/contact") setActive([false, true, false]);
+    else setActive([false, false, true]);
+  }, [location]);
 
   const actions = [
     { actions: onHomePageIconClick, icon: faHome },
@@ -32,12 +41,12 @@ const Sidebar = ({
   return (
     <Flex
       direction={"column"}
-      wrap={"wrap"}
+      wrap={"nowrap"}
       align={"center"}
       h={"100%"}
       justify={"space-between"}
     >
-      <Box p={10} h={80} w={80}>
+      <Box p={5}>
         <Image src={iconDev} />
       </Box>
       <Flex
@@ -49,7 +58,7 @@ const Sidebar = ({
       >
         {actions.map((act, index) => (
           <ActionIcon
-            size={50}
+            size={30}
             onClick={() => handleClick(act.actions, index)}
             c={active[index] ? theme.colors.yellow[3] : "none"}
           >

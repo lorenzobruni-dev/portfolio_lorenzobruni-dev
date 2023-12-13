@@ -1,17 +1,9 @@
 import { Flex } from "@mantine/core";
 import ContentHomepage from "../components/homepage/contentHomepage/ContentHomepage";
-import { useEffect, useState } from "react";
-import { useElementSize } from "@mantine/hooks";
+import { useCommonContext } from "../context/commonContext";
 
 const Homepage = () => {
-  const { width } = useElementSize();
-  const [isStrected, setIsStrected] = useState(false);
-
-  useEffect(() => {
-    if (width <= 660) setIsStrected(true);
-    else setIsStrected(false);
-  }, [width]);
-
+  const { isStrected } = useCommonContext();
   return (
     <Flex
       pl={isStrected ? 50 : 150}

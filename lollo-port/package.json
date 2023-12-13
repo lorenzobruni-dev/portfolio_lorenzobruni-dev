@@ -4,10 +4,12 @@
   "homepage": "http://lorenzobruni-dev.github.io/portfolio_lorenzobruni-dev",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mantine/core": "^6.0.13",
+    "@mantine/hooks": "^7.3.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,8 +20,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "source-map-loader": "^4.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
+    "webpack": "^5.89.0",
     "wouter": "^2.12.1"
   },
   "scripts": {
@@ -27,8 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

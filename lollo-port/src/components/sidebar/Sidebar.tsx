@@ -47,7 +47,14 @@ const Sidebar = ({
       <Flex gap={30} direction={"column"} align={"center"} justify={"center"}>
         {actions.map((act, index) => (
           <ActionIcon
+            key={index}
             size={30}
+            sx={{
+              "&:hover": {
+                transition: "all 400ms cubic-bezier(.47,1.64,.41,.8)",
+                transform: "scale(1.1)",
+              },
+            }}
             onClick={() => handleClick(act.actions, index)}
             c={active[index] ? theme.colors.yellow[3] : "none"}
           >

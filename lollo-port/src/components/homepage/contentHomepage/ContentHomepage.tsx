@@ -26,7 +26,11 @@ const ContentHomepage = () => {
             backgroundColor: "inherit",
             border: `1px solid ${theme.colors.yellow[3]}`,
             color: theme.colors.yellow[3],
-            "&:hover": { backgroundColor: "inherit" },
+            transition: "all 400ms cubic-bezier(.47,1.64,.41,.8)",
+            "&:hover": {
+              backgroundColor: "inherit",
+              transform: "scale(1.1)",
+            },
           }}
         >
           Contact me

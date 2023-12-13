@@ -8,13 +8,13 @@ function App() {
     <Router>
       <Switch>
         <Route path={"/"}>
-          <MainPage location={"/"} />
+          <MainPage location={"/"} isHomepage={true} />
         </Route>
         <Route path={"/about-me"}>
-          <MainPage location={"/about-me"} />
+          <MainPage location={"/about-me"} isHomepage={false} />
         </Route>
         <Route path={"/contact"}>
-          <MainPage location={"/contact"} />
+          <MainPage location={"/contact"} isHomepage={false} />
         </Route>
         <Route>
           <Redirect to={"/"} />

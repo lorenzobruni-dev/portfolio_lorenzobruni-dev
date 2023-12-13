@@ -3,3 +3,9 @@
     height: 100vh;
     background: url("../assets/backgrounds/background-homepage.webp") 200px;
 }
+
+.others {
+    width: 100vw;
+    height: 100vh;
+    background: url("../assets/backgrounds/othersBackgroundImg.svg");
+}

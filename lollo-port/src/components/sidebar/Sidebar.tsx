@@ -1,6 +1,5 @@
-import { ActionIcon, Box, Flex, Image, useMantineTheme } from "@mantine/core";
+import { ActionIcon, Flex, useMantineTheme } from "@mantine/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import iconDev from "../../assets/sidebar/icon-dev.svg.png";
 import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
@@ -37,7 +36,6 @@ const Sidebar = ({
     { actions: onAboutMeIconClick, icon: faUser },
   ];
 
-  console.log(active);
   return (
     <Flex
       direction={"column"}

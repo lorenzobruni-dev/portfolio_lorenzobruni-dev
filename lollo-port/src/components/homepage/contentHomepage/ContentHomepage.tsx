@@ -20,6 +20,7 @@ const ContentHomepage = () => {
         </Text>
         <Button
           variant="default"
+          w={"90%"}
           onClick={() => setLocation("/contact")}
           sx={{
             backgroundColor: "inherit",

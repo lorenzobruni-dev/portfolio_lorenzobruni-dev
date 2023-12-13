@@ -46,9 +46,6 @@ const Sidebar = ({
       h={"100%"}
       justify={"space-around"}
     >
-      <Box p={5} pos={"absolute"} top={0}>
-        <Image src={iconDev} />
-      </Box>
       <Flex gap={30} direction={"column"} align={"center"} justify={"center"}>
         {actions.map((act, index) => (
           <ActionIcon

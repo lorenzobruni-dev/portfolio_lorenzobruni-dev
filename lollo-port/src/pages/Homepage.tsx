@@ -1,9 +1,15 @@
 import { Flex } from "@mantine/core";
 import ContentHomepage from "../components/homepage/contentHomepage/ContentHomepage";
+import { useEffect, useState } from "react";
 
 const Homepage = () => {
   const width = window.screen.width;
-  const isStrected = width <= 660;
+  const [isStrected, setIsStrected] = useState(false);
+
+  useEffect(() => {
+    if (width <= 660) setIsStrected(true);
+    else setIsStrected(false);
+  }, [width]);
 
   return (
     <Flex

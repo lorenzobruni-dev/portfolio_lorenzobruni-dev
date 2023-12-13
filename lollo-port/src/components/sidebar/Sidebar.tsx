@@ -44,18 +44,12 @@ const Sidebar = ({
       wrap={"nowrap"}
       align={"center"}
       h={"100%"}
-      justify={"space-between"}
+      justify={"space-around"}
     >
-      <Box p={5}>
+      <Box p={5} pos={"absolute"} top={0}>
         <Image src={iconDev} />
       </Box>
-      <Flex
-        gap={30}
-        direction={"column"}
-        align={"center"}
-        justify={"center"}
-        pb={10}
-      >
+      <Flex gap={30} direction={"column"} align={"center"} justify={"center"}>
         {actions.map((act, index) => (
           <ActionIcon
             size={30}

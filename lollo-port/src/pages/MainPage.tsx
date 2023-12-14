@@ -4,6 +4,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import styles from "./MainPage.module.css";
 import { useLocation } from "wouter";
 import Homepage from "./Homepage";
+import Contact from "./Contact";
 
 type MainPageProps = {
   location: string;
@@ -23,7 +24,7 @@ const RenderCorrectComponent: React.FC<PropsRenderComponent> = ({
     case "/about-me":
       return <>About me</>;
     case "/contact":
-      return <>Contact me</>;
+      return <Contact />;
     default:
       return <>Home</>;
   }

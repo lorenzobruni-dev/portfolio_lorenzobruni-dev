@@ -8,7 +8,14 @@ const ContentHomepage = () => {
   return (
     <BodyHomepage>
       <Flex direction={"column"} gap={10}>
-        <Text fz={30} sx={{ letterSpacing: -2 }}>
+        <Text
+          fz={30}
+          fw={400}
+          sx={{
+            letterSpacing: -2,
+            fontFamily: "Coolvetica",
+          }}
+        >
           Hi, <br />
           I'm Lorenzo Bruni
           <br />

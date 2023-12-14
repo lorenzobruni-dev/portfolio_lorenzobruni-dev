@@ -17,7 +17,6 @@ const Sidebar = ({
   const theme = useMantineTheme();
   const [location] = useLocation();
   const [active, setActive] = useState([false, false, false]);
-  const URL = "/portfolio_lorenzobruni-dev/";
   const handleClick = (action: () => void, index: number) => {
     const newActive = Array(active.length).fill(false);
     newActive[index] = true;
@@ -26,8 +25,8 @@ const Sidebar = ({
   };
 
   useEffect(() => {
-    if (location === `${URL}/`) setActive([true, false, false]);
-    else if (location === `${URL}/contact`) setActive([false, true, false]);
+    if (location === `/`) setActive([true, false, false]);
+    else if (location === `/contact`) setActive([false, true, false]);
     else setActive([false, false, true]);
   }, [location]);
 

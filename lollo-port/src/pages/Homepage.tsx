@@ -1,12 +1,11 @@
 import { Flex } from "@mantine/core";
 import ContentHomepage from "../components/homepage/contentHomepage/ContentHomepage";
-import { useCommonContext } from "../context/commonContext";
+import styleHomepage from "./Homepage.module.css";
 
 const Homepage = () => {
-  const { isStrected } = useCommonContext();
   return (
     <Flex
-      pl={isStrected ? 50 : 150}
+      className={styleHomepage.home}
       direction={"column"}
       align={"center"}
       h={"100%"}

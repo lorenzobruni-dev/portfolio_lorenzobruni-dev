@@ -1,0 +1,10 @@
+.home {
+    padding-left: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .home {
+        padding-left: 50px;
+    }
+}
+

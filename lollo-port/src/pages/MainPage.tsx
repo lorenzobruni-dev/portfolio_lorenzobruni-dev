@@ -31,8 +31,9 @@ const RenderCorrectComponent: React.FC<PropsRenderComponent> = ({
 const MainPage = ({location, isHomepage}: MainPageProps) => {
   const theme = useMantineTheme();
   const [, setLocation] = useLocation();
+  const URL = "/portfolio_lorenzobruni-dev/";
 
-  console.log(isHomepage)
+  console.log(isHomepage);
   return (
       <Grid
           data-testid={"chat-page"}
@@ -51,9 +52,9 @@ const MainPage = ({location, isHomepage}: MainPageProps) => {
       >
         <Grid.Col span={1} h={"100vh"} bg={theme.colors.gray[9]}>
           <Sidebar
-              onAboutMeIconClick={() => setLocation("/about-me")}
-              onContactMeIconClick={() => setLocation("/contact")}
-              onHomePageIconClick={() => setLocation("/")}
+              onAboutMeIconClick={() => setLocation(`${URL}/about-me`)}
+              onContactMeIconClick={() => setLocation(`${URL}/contact`)}
+              onHomePageIconClick={() => setLocation(`${URL}/`)}
           />
         </Grid.Col>
         <Grid.Col

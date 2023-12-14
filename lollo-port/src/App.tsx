@@ -4,17 +4,18 @@ import { Redirect, Route, Router, Switch } from "wouter";
 import MainPage from "./pages/MainPage";
 
 function App() {
+  const URL = "/portfolio_lorenzobruni-dev/";
   return (
     <Router>
       <Switch>
         <Route path={"/"}>
-          <MainPage location={"/"} isHomepage={true} />
+          <MainPage location={`${URL}/`} isHomepage={true} />
         </Route>
         <Route path={"/about-me"}>
-          <MainPage location={"/about-me"} isHomepage={false} />
+          <MainPage location={`${URL}/about-me`} isHomepage={false} />
         </Route>
         <Route path={"/contact"}>
-          <MainPage location={"/contact"} isHomepage={false} />
+          <MainPage location={`${URL}/contact`} isHomepage={false} />
         </Route>
         <Route>
           <Redirect to={"/"} />

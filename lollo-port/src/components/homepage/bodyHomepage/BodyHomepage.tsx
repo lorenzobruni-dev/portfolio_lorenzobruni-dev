@@ -8,12 +8,13 @@ const BodyHomepage = ({ children }: BodyHomepageProps) => {
   const theme = useMantineTheme();
 
   const styleBodyText: Sx = {
-    fontFamily: "Brush Script MT, Brush Script Std, cursive",
+    fontFamily: "La belle Aurore",
     fontStyle: "italic",
   };
 
   const styleFlexTags: Sx = {
     textAlign: "left",
+    fontFamily: "La belle Aurore",
     width: "100%",
   };
   return (

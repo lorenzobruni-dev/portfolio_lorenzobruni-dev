@@ -37,18 +37,19 @@ const Sidebar = ({
   ];
 
   return (
-    <Flex
-      direction={"column"}
-      wrap={"nowrap"}
-      align={"center"}
-      h={"100%"}
-      justify={"space-around"}
-    >
-      <Flex gap={30} direction={"column"} align={"center"} justify={"center"}>
+    <Flex direction={"column"} wrap={"nowrap"} align={"center"} h={"100%"}>
+      <Flex
+        gap={30}
+        p={5}
+        h={"100%"}
+        direction={"column"}
+        align={"center"}
+        justify={"center"}
+      >
         {actions.map((act, index) => (
           <ActionIcon
             key={index}
-            size={30}
+            size={25}
             sx={{
               "&:hover": {
                 transition: "all 400ms cubic-bezier(.47,1.64,.41,.8)",

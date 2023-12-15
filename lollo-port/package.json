@@ -1,7 +1,7 @@
 {
   "name": "lollo-port",
   "version": "0.1.0",
-  "homepage": "jovial-stroopwafel-aa63a9",
+  "homepage": "https://jovial-stroopwafel-aa63a9.netlify.app",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

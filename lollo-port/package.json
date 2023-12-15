@@ -1,7 +1,7 @@
 {
   "name": "lollo-port",
   "version": "0.1.0",
-  "homepage": "http://lorenzobruni-dev.github.io/portfolio_lorenzobruni-dev",
+  "homepage": "jovial-stroopwafel-aa63a9",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
